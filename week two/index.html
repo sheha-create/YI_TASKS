@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible, responsive accordion component built with HTML, CSS, and vanilla JavaScript.">
+  <title>Interactive UI Component | FAQ Accordion</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Brightside home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span>Brightside <span class="brand-muted">UI Lab</span></span>
+    </a>
+    <span class="header-note">Vanilla JavaScript component demo</span>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> INTERACTIVE COMPONENTS</p>
+      <h1 id="page-title">Questions, meet <span>clear answers.</span></h1>
+      <p class="intro-copy">A reusable, keyboard-friendly FAQ accordion designed to make information easier to explore without overwhelming the page.</p>
+      <div class="intro-meta" aria-label="Component features">
+        <span><span aria-hidden="true">✓</span> Accessible</span>
+        <span><span aria-hidden="true">✓</span> Responsive</span>
+        <span><span aria-hidden="true">✓</span> No dependencies</span>
+      </div>
+    </section>
+
+    <section class="component-card" aria-labelledby="faq-heading">
+      <div class="card-heading">
+        <div>
+          <p class="section-kicker">THE QUICK GUIDE</p>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+        </div>
+        <button class="text-button" id="toggle-all" type="button">Expand all</button>
+      </div>
+      <p class="card-description">Choose a question to reveal its answer. You can use a mouse, touch screen, or keyboard.</p>
+
+      <div class="accordion" id="faq-accordion">
+        <article class="accordion-item">
+          <h3 class="accordion-heading">
+            <button class="accordion-trigger" id="faq-trigger-1" type="button"
+              aria-expanded="true" aria-controls="faq-panel-1">
+              <span class="question-number">01</span>
+              <span class="question-text">What is an accordion component?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
+            <div class="panel-inner">
+              <p>An accordion is a compact interface pattern that lets people show or hide related content. It keeps a page easy to scan while allowing visitors to open the details they need.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion-item">
+          <h3 class="accordion-heading">
+            <button class="accordion-trigger" id="faq-trigger-2" type="button"
+              aria-expanded="false" aria-controls="faq-panel-2">
+              <span class="question-number">02</span>
+              <span class="question-text">Does this component work with a keyboard?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+            <div class="panel-inner">
+              <p>Yes. Each question is a real button, so Tab moves focus between controls and Enter or Space toggles the focused item. The visible focus indicator helps show where you are.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion-item">
+          <h3 class="accordion-heading">
+            <button class="accordion-trigger" id="faq-trigger-3" type="button"
+              aria-expanded="false" aria-controls="faq-panel-3">
+              <span class="question-number">03</span>
+              <span class="question-text">Can I open more than one answer at once?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+            <div class="panel-inner">
+              <p>Yes. This version supports independent panels, so several answers can remain open together. Use the “Expand all” or “Collapse all” control to manage every answer at once.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion-item">
+          <h3 class="accordion-heading">
+            <button class="accordion-trigger" id="faq-trigger-4" type="button"
+              aria-expanded="false" aria-controls="faq-panel-4">
+              <span class="question-number">04</span>
+              <span class="question-text">What happens if JavaScript is unavailable?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+            <div class="panel-inner">
+              <p>The script includes defensive checks for missing elements and avoids relying on optional browser APIs. If JavaScript cannot run at all, the page still displays its structure, but the panels will not be interactive; a production version can use a native disclosure element such as <code>&lt;details&gt;</code> as a no-script alternative.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="status-message" id="component-status" role="status" aria-live="polite">1 of 4 answers open</p>
+    </section>
+
+    <aside class="tip-card" aria-label="Keyboard tip">
+      <span class="tip-icon" aria-hidden="true">⌘</span>
+      <p><strong>Keyboard tip</strong><br>Press <kbd>Tab</kbd> to move between questions, then <kbd>Enter</kbd> or <kbd>Space</kbd> to open or close an answer.</p>
+    </aside>
+    <p class="page-note">Built with semantic HTML, responsive CSS, and plain JavaScript.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Brightside UI Lab</span>
+    <span>Interactive component task · <span id="current-year">2026</span></span>
+  </footer>
+</body>
+</html>
