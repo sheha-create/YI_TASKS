@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An accessible information portal demo with semantic structure, keyboard navigation, and readable contrast.">
+  <title>Open Pages | Accessible Information Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Open Pages home">
+        <span class="brand-icon" aria-hidden="true">OP</span>
+        <span>Open Pages</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+        aria-expanded="false" aria-controls="primary-navigation">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="toggle-label">Menu</span>
+      </button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#latest">Latest articles</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">READ · LEARN · GROW</p>
+        <h1 id="hero-title">Ideas for a more <span>open world.</span></h1>
+        <p class="hero-copy">Thoughtful articles and practical guides to help you learn something useful, one clear page at a time.</p>
+        <a class="button button-primary" href="#latest">Explore the latest</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card art-card-back"></div>
+        <div class="art-card art-card-front">
+          <span class="art-label">FIELD NOTES</span>
+          <span class="art-line art-line-long"></span>
+          <span class="art-line"></span>
+          <span class="art-line art-line-short"></span>
+          <span class="art-orb"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="latest" aria-labelledby="latest-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FRESH PERSPECTIVES</p>
+          <h2 id="latest-title">Latest articles</h2>
+        </div>
+        <p class="section-intro">Useful ideas, without the noise.</p>
+      </div>
+
+      <div class="article-grid">
+        <article class="article-card">
+          <div class="article-visual visual-teal" aria-hidden="true"><span class="visual-symbol">01</span></div>
+          <div class="article-body">
+            <p class="article-meta"><span>DESIGN</span><span aria-hidden="true">·</span><time datetime="2026-10-12">12 Oct 2026</time></p>
+            <h3><a href="#article-accessibility">Designing for everyone starts with the basics</a></h3>
+            <p>Small decisions in structure, language, and interaction can make a big difference to how people use the web.</p>
+            <a class="read-link" href="#article-accessibility">Read article <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-visual visual-gold" aria-hidden="true"><span class="visual-symbol">02</span></div>
+          <div class="article-body">
+            <p class="article-meta"><span>LEARNING</span><span aria-hidden="true">·</span><time datetime="2026-10-08">8 Oct 2026</time></p>
+            <h3><a href="#article-focus">A calmer way to focus in a busy world</a></h3>
+            <p>Simple routines can help create more room for deep work, reflection, and thoughtful decisions.</p>
+            <a class="read-link" href="#article-focus">Read article <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-visual visual-lilac" aria-hidden="true"><span class="visual-symbol">03</span></div>
+          <div class="article-body">
+            <p class="article-meta"><span>COMMUNITY</span><span aria-hidden="true">·</span><time datetime="2026-10-03">3 Oct 2026</time></p>
+            <h3><a href="#article-community">Building online spaces that welcome people</a></h3>
+            <p>Better digital communities grow from clear expectations, respectful conversation, and inclusive choices.</p>
+            <a class="read-link" href="#article-community">Read article <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-band" id="guides" aria-labelledby="guides-title">
+      <div>
+        <p class="eyebrow">A GOOD PLACE TO START</p>
+        <h2 id="guides-title">Make the web work better for more people.</h2>
+      </div>
+      <p>Explore practical guides to accessible design, clear writing, and more considerate digital experiences.</p>
+      <a class="button button-light" href="#about">Our approach</a>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">WHY OPEN PAGES?</p>
+        <h2 id="about-title">Good information should feel open to everyone.</h2>
+      </div>
+      <p>Open Pages is a fictional information portal concept. This demo is built around readable content, clear structure, predictable controls, and keyboard-friendly navigation. Accessibility is an ongoing practice, not a final checkbox.</p>
+    </section>
+
+    <section class="article-detail" id="article-accessibility" aria-labelledby="detail-title">
+      <p class="eyebrow">ACCESSIBILITY NOTE</p>
+      <h2 id="detail-title">Accessibility begins before the visuals.</h2>
+      <p>Meaningful headings, descriptive links, a logical reading order, and visible keyboard focus help people navigate content in different ways. Use this page as a small example, then test real content with assistive technologies and people with varied access needs.</p>
+    </section>
+    <div class="visually-hidden" id="navigation-status" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-icon" aria-hidden="true">OP</span><span>Open Pages</span></a>
+      <p>Clear ideas. More open experiences.</p>
+      <p>© <span id="current-year">2026</span> Open Pages demo</p>
+    </div>
+  </footer>
+</body>
+</html>
