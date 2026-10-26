@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PulseBoard project delivery dashboard with searchable project data and progress insights.">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>PulseBoard | Project Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="logo" href="#" aria-label="PulseBoard home"><span class="logo-mark" aria-hidden="true">P</span><span>pulseboard</span></a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav>
+        <a class="nav-item active" href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+        <a class="nav-item" href="#projects"><span aria-hidden="true">▤</span> Projects</a>
+        <a class="nav-item" href="#activity"><span aria-hidden="true">◷</span> Activity</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="avatar">JD</div><div><strong>Jordan Davis</strong><small>Workspace admin</small></div><span aria-hidden="true">⌄</span></div>
+    </aside>
+    <main id="main" class="main-content">
+      <header class="page-header">
+        <div><p class="eyebrow">MONDAY, OCTOBER 26, 2026</p><h1>Good morning, Jordan <span aria-hidden="true">✦</span></h1><p class="muted">Here’s what’s happening across your projects.</p></div>
+        <div class="header-actions"><button class="icon-button" id="refresh-button" type="button" aria-label="Refresh dashboard data" title="Refresh data">↻</button><button class="primary-button" id="export-button" type="button">↓ <span>Export CSV</span></button></div>
+      </header>
+      <section id="overview" aria-labelledby="overview-title">
+        <div class="section-heading"><div><h2 id="overview-title">Overview</h2><p class="muted">Your workspace at a glance</p></div><span class="updated" id="updated-label">Updated from local JSON</span></div>
+        <div class="metric-grid" id="metrics" aria-live="polite">
+          <article class="metric-card"><p>Active projects</p><div class="metric-value">…</div><small>Loading dashboard data</small></article>
+          <article class="metric-card"><p>Tasks completed</p><div class="metric-value">…</div><small>Loading dashboard data</small></article>
+          <article class="metric-card"><p>Team utilization</p><div class="metric-value">…</div><small>Loading dashboard data</small></article>
+          <article class="metric-card"><p>On-time delivery</p><div class="metric-value">…</div><small>Loading dashboard data</small></article>
+        </div>
+      </section>
+      <div class="content-grid">
+        <section class="panel chart-panel" aria-labelledby="trend-title">
+          <div class="panel-heading"><div><h2 id="trend-title">Delivery trend</h2><p class="muted">Tasks completed vs. created</p></div><span class="legend"><i class="legend-dot completed"></i> Completed <i class="legend-dot created"></i> Created</span></div>
+          <div id="trend-chart" class="chart" role="img" aria-label="Monthly bar chart comparing completed and created tasks"><p class="muted">Loading chart…</p></div>
+          <p class="chart-note">Monthly totals · May to October</p>
+        </section>
+        <section id="activity" class="panel activity-panel" aria-labelledby="activity-title">
+          <div class="panel-heading"><div><h2 id="activity-title">Recent activity</h2><p class="muted">Latest team updates</p></div><span class="activity-count">4 updates</span></div>
+          <ul id="activity-list" class="activity-list"><li class="muted">Loading activity…</li></ul>
+        </section>
+      </div>
+      <section id="projects" class="panel projects-panel" aria-labelledby="projects-title">
+        <div class="panel-heading project-heading"><div><h2 id="projects-title">Projects</h2><p class="muted">Track progress and keep work moving.</p></div><span class="project-total" id="project-total">Loading…</span></div>
+        <div class="table-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Search projects…" autocomplete="off"></label>
+          <label class="sr-only" for="status-filter">Filter by status</label>
+          <select id="status-filter"><option value="all">All statuses</option><option>In progress</option><option>Review</option><option>At risk</option><option>Completed</option></select>
+          <label class="sr-only" for="sort-select">Sort projects</label>
+          <select id="sort-select"><option value="dueDate">Sort: Due date</option><option value="name">Sort: Name A–Z</option><option value="progress">Sort: Progress</option></select>
+        </div>
+        <p id="table-status" class="sr-only" aria-live="polite"></p>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Project</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Progress</th><th scope="col">Due date</th></tr></thead><tbody id="project-rows"><tr><td colspan="5">Loading projects…</td></tr></tbody></table></div>
+        <p id="empty-state" class="empty-state" hidden>No projects match those filters.</p>
+      </section>
+      <footer><span>PulseBoard · Project delivery workspace</span><span>Demo data for internship assessment</span></footer>
+    </main>
+  </div>
+  <noscript><p class="noscript">Please enable JavaScript to load the dashboard data from the JSON file.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "title": "PulseBoard",
+    "subtitle": "A clear view of project delivery",
+    "updated": "2026-10-26",
+    "currency": "USD"
+  },
+  "summary": {
+    "activeProjects": 12,
+    "completedTasks": 86,
+    "teamUtilization": 78,
+    "onTimeRate": 92,
+    "monthlyTrend": [
+      {
+        "month": "May",
+        "completed": 42,
+        "created": 48
+      },
+      {
+        "month": "Jun",
+        "completed": 51,
+        "created": 55
+      },
+      {
+        "month": "Jul",
+        "completed": 47,
+        "created": 52
+      },
+      {
+        "month": "Aug",
+        "completed": 64,
+        "created": 61
+      },
+      {
+        "month": "Sep",
+        "completed": 72,
+        "created": 70
+      },
+      {
+        "month": "Oct",
+        "completed": 86,
+        "created": 79
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "PR-104",
+      "name": "Customer Portal Refresh",
+      "owner": "Aarav Mehta",
+      "team": "Product",
+      "status": "In progress",
+      "priority": "High",
+      "progress": 76,
+      "dueDate": "2026-11-04",
+      "tasks": 17
+    },
+    {
+      "id": "PR-105",
+      "name": "Analytics Workspace",
+      "owner": "Maya Iyer",
+      "team": "Engineering",
+      "status": "In progress",
+      "priority": "Medium",
+      "progress": 58,
+      "dueDate": "2026-11-12",
+      "tasks": 24
+    },
+    {
+      "id": "PR-106",
+      "name": "Mobile Onboarding",
+      "owner": "Riya Shah",
+      "team": "Design",
+      "status": "Review",
+      "priority": "High",
+      "progress": 91,
+      "dueDate": "2026-10-30",
+      "tasks": 11
+    },
+    {
+      "id": "PR-107",
+      "name": "Knowledge Base",
+      "owner": "Kabir Nair",
+      "team": "Content",
+      "status": "Completed",
+      "priority": "Low",
+      "progress": 100,
+      "dueDate": "2026-10-18",
+      "tasks": 9
+    },
+    {
+      "id": "PR-108",
+      "name": "Billing Improvements",
+      "owner": "Anaya Rao",
+      "team": "Engineering",
+      "status": "At risk",
+      "priority": "High",
+      "progress": 42,
+      "dueDate": "2026-10-29",
+      "tasks": 20
+    },
+    {
+      "id": "PR-109",
+      "name": "Design System 2.0",
+      "owner": "Dev Patel",
+      "team": "Design",
+      "status": "In progress",
+      "priority": "Medium",
+      "progress": 63,
+      "dueDate": "2026-11-20",
+      "tasks": 15
+    },
+    {
+      "id": "PR-110",
+      "name": "Email Preferences",
+      "owner": "Ishaan Das",
+      "team": "Product",
+      "status": "Completed",
+      "priority": "Low",
+      "progress": 100,
+      "dueDate": "2026-10-21",
+      "tasks": 8
+    },
+    {
+      "id": "PR-111",
+      "name": "Search Relevance",
+      "owner": "Nila Thomas",
+      "team": "Engineering",
+      "status": "At risk",
+      "priority": "High",
+      "progress": 35,
+      "dueDate": "2026-11-02",
+      "tasks": 18
+    },
+    {
+      "id": "PR-112",
+      "name": "Help Centre Audit",
+      "owner": "Tara Menon",
+      "team": "Content",
+      "status": "Review",
+      "priority": "Medium",
+      "progress": 88,
+      "dueDate": "2026-11-06",
+      "tasks": 13
+    }
+  ],
+  "activity": [
+    {
+      "initials": "MI",
+      "name": "Maya Iyer",
+      "action": "updated Analytics Workspace",
+      "time": "12 min ago",
+      "tone": "violet"
+    },
+    {
+      "initials": "RP",
+      "name": "Riya Shah",
+      "action": "submitted Mobile Onboarding for review",
+      "time": "38 min ago",
+      "tone": "blue"
+    },
+    {
+      "initials": "KN",
+      "name": "Kabir Nair",
+      "action": "completed Knowledge Base",
+      "time": "1 hour ago",
+      "tone": "green"
+    },
+    {
+      "initials": "AR",
+      "name": "Anaya Rao",
+      "action": "flagged Billing Improvements at risk",
+      "time": "2 hours ago",
+      "tone": "orange"
+    }
+  ]
+}
