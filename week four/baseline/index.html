@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow | Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#">TaskFlow</a><span>Small steps. Real progress.</span></header>
+  <main class="container">
+    <section class="intro"><p class="eyebrow">YOUR WORKSPACE</p><h1>Make room for what matters.</h1><p>Capture a task, choose a priority, and keep moving.</p></section>
+    <section class="panel">
+      <form id="task-form"><label for="task-input">New task</label><div class="form-row"><input id="task-input" placeholder="e.g. Finish project report" required><select id="priority"><option>Normal</option><option>High</option><option>Low</option></select><button type="submit">Add task</button></div></form>
+      <div class="toolbar"><input id="search" type="search" placeholder="Search tasks" aria-label="Search tasks"><div class="filters"><button type="button" data-filter="all">All</button><button type="button" data-filter="active">Active</button><button type="button" data-filter="done">Completed</button></div></div>
+      <ul id="tasks" class="tasks"></ul>
+      <p id="summary">0 tasks · 0 completed</p>
+    </section>
+  </main>
+  <footer>TaskFlow · Plan gently, finish strongly.</footer>
+</body>
+</html>
